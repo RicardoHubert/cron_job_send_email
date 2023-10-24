@@ -33,7 +33,7 @@ class NewArrivals extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.newarrivals')->subject($this->new_arrival->title)->from('adarmamandiri@gmail.com','Adarma Mandiri Nusantara')->with([
+        return $this->markdown('emails.newarrivals')->subject($this->new_arrival->title)->from('marketing@adarmamandiri.com','Adarma Mandiri Nusantara')->with([
             'user' => $this->user,
             'new_arrival' => $this->new_arrival,
         ]);
