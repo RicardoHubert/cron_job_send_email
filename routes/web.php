@@ -1,7 +1,9 @@
     <?php
 
     use Illuminate\Support\Facades\Route;
-    use app\Http\Controller\MessageController;  
+    use App\Http\Controllers\MessageController;
+
+    // use Http\Controller\MessageController;  
 
     /*
     |--------------------------------------------------------------------------
@@ -17,7 +19,8 @@
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::get('/get_users', 'MessageController@getUsers');
-    Route::get('/get_messages', 'MessageController@getMessages');
-    Route::post('notifications', 'MessageController@sendMail');
+    Route::get('/get_users', [MessageController::class, 'getUsers']);
+    Route::get('/get_messages', [MessageController::class, 'getMessages']);
+    // Route::post('notifications', 'MessageController@sendMail');
+    Route::post('/notifications', [MessageController::class, 'sendMail']);
 

@@ -14,15 +14,13 @@ class MessageController extends Controller
 {
     //
     public function getUsers(){
-       $tes = return User::all();
-       var_dump($tes);
-       die();
+        return User::all();
     }
     public function getMessages(){
         return Message::orderBy('created_at', 'desc')->get();
     }
 
-    public function sendMail(Request, $request){
+    public function sendMail(Request $request){
         $message = new Message();
         $message->title = $request->title;
         $message->body = $request->body;
