@@ -1,3 +1,3 @@
-ERROR LIST :
-1.Belum bisa get user untuk ditampilkan pada frontend
-2.Message blm terkirim lewat cronjob
+ERROR LIST 24 OKT 23 :
+1. Hanya perlu testing menggunakan cronjob,
+jika send email secara manual sudah berhasil
